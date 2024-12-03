@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes bounce {
+  0%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-4px);
+  }
+}
+.animate-bounce {
+  animation: bounce 1.5s infinite ease-in-out;
+}
+.animate-bounce-delay-1 {
+  animation-delay: 0.2s;
+}
+.animate-bounce-delay-2 {
+  animation-delay: 0.4s;
+}
+
+@layer components {
+  .form-item {
+    @apply py-1;
+  }
+  .form-input {
+    @apply rounded-md px-3 py-2 border text-gray-500 w-full;
+  }
+  .form-label {
+    @apply flex items-center font-semibold text-gray-500;
+  }
+}
